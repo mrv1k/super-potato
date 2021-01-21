@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body, html { padding: 0; margin: 0; }
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1px;
+            background-color: var(--red);
+        }
+        .letter {
+            background-color : var(--green);
+        }
+    </style>
     <title>Super Potato</title>
 </head>
+
 <body>
-    <div>why u do diz</div>
-    <div>why u do diz</div>
+    <div class="wrapper">
+        <div class="letter">a</div>
+        <div class="letter">b</div>
+    </div>
 </body>
+
 </html>
