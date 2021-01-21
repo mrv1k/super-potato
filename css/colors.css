@@ -1,0 +1,23 @@
+/*
+Apple Colors
+https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors
+src: https://gist.github.com/lithammer/e9e68c131297c3158a654c0fdfc4111a
+*/
+/* make light mode default */
+:root {
+    --gray-1: rgb(142, 142, 147);
+    --gray-2: rgb(174, 174, 178);
+    --gray-3: rgb(199, 199, 204);
+    --gray-4: rgb(209, 209, 214);
+    --gray-5: rgb(229, 229, 234);
+    --gray-6: rgb(242, 242, 247);
+    --blue: rgb(0, 122, 255);
+    --green: rgb(52, 199, 89);
+    --indigo: rgb(88, 86, 214);
+    --orange: rgb(255, 149, 0);
+    --pink: rgb(255, 45, 85);
+    --purple: rgb(175, 82, 222);
+    --red: rgb(255, 59, 48);
+    --teal: rgb(90, 200, 250);
+    --yellow: rgb(255, 204, 0);
+  }
