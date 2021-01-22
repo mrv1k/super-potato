@@ -11,3 +11,4 @@ https://css-tricks.com/getting-started-css-grid/
 https://css-tricks.com/introduction-fr-css-unit/
 https://css-tricks.com/css-grid-replace-flexbox/
 https://dev.to/samanthaming/css-variables-8di
+https://gridbyexample.com/patterns/
