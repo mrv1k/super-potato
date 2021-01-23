@@ -14,26 +14,46 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            /* grid-template-columns: 3fr 1fr 1fr;
-            grid-template-rows: 1fr 3fr; */
+            grid-template-rows: repeat(9, auto);
             gap: 10px;
         }
-        .header, .footer { background-color: var(--blue);}
+        .header, .footer {
+            background-color: var(--blue);
+            grid-column: span 12;
+        }
+        .row {
+            grid-column: 2;
+        }
+        .row div {
+            grid-column: auto;
+        }
     </style>
     <title>Super Potato</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            Header
-        </header>
+        <header class="header">Header</header>
+        <div class="row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <div>come on</div>
+        <div>align</div>
+        <div>you</div>
+        <div>grid</div>
 
-        <div>oof</div>
-
-        <footer class="footer">
-            Footer
-        </footer>
+        <footer class="footer">Footer</footer>
     </div>
 </body>
 
