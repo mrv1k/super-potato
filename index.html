@@ -27,28 +27,12 @@
             grid-template-rows: repeat(9, auto);
         }
 
-
         .row {
             display: grid;
-            grid-template-columns:
-                52px 112px 8px 118px 18px
-                54px [img-t-s] 12px [img-b-s] 102px [ticket-s] 6px [img-b-e] 8px [ticket-e]
-                29px [img-r-s] 25px 1fr [img-r-e];
+            grid-template-columns: 52px 112px [btn-1] 8px 118px [btn-2] 18px 54px [img-t-s] 12px [img-b-s] 102px [ticket-s] 6px [img-b-e] 8px [ticket-e] 29px [img-r-s] 25px 1fr [img-r-e];
             /* 15 columns*/
-            grid-template-rows: 39px 13px 4px 8px 42px 27px 57px 18px 26px 10px 5px 8px 32px 44px 16px 11px 21px;
-        }
-
-        .bg-1 {
-            background-image: url(./reference/1-720px.png);
-            filter: invert(100%);
-            height: 500px;
-            width: 720px;
-        }
-
-        .icon-ticket {
-            transform: rotate(45deg);
-            grid-column: ticket-s / ticket-e;
-            grid-row: 10 / 12;
+            grid-template-rows: 39px 13px 4px 8px 42px 27px 57px 18px 26px 10px 5px 8px 32px 44px 16px 12px 20px;
+            /* 17 rows */
         }
     </style>
     <title>Super Potato</title>
@@ -60,8 +44,17 @@
             <img class="logo" src="./img/video-camera.svg" alt="video-camera">
             <header class="header">zmurl</header>
 
+            <div class="title">Organize delightful Zoom events</div>
+            <div class="subtitle">Create gorgeous event page in minutes with custom
+                reminders and direct messagest.
+            </div>
+
             <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
-            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="video-camera">
+            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="ticket">
+            <img class="icon icon-calendar" src="./img/calendar-f.svg" alt="calendar">
+
+            <button class="btn btn-auth">Sign in with Zoom</button>
+            <button class="btn btn-guest">Continue as Guest</button>
 
             <img class="img-top" src="https://via.placeholder.com/360x255">
             <img class="img-right" src="https://via.placeholder.com/405x455">

@@ -1,13 +1,11 @@
 @import url("colors.css");
 
-
 .header {
     font-size: 14pt;
     grid-column: 2;
     grid-row: 2;
-    position: absolute;
-    left: 29px;
-    top: -5px;
+    margin-left: 28px;
+    margin-top: -4px;
 }
 
 .logo {
@@ -26,6 +24,18 @@
     height: auto;
     margin-top: -3px;
     margin-left: -1px;
+}
+
+.icon-ticket {
+    transform: rotate(45deg);
+    grid-column: ticket-s / ticket-e;
+    grid-row: 10 / 12;
+}
+
+.icon-calendar {
+    grid-column: 5;
+    grid-row: 16;
+    margin-top: -1px;
 }
 
 img {
@@ -47,4 +57,48 @@ img {
 .img-bottom {
     grid-row: 11 / 18;
     grid-column: img-b-s / img-b-e;
+}
+
+.title {
+    grid-column: 2 / 6;
+    font-size: 23pt;
+    grid-row: 7;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+.subtitle {
+    grid-column: 2 / 6;
+    grid-row: 9;
+    font-size: 8pt;
+    color: var(--gray-2);
+    margin-top: -2px;
+}
+
+.btn {
+    grid-row: 13;
+    border: none;
+    font-size: 7pt;
+    border-radius: 3px;
+}
+
+.btn-auth {
+    grid-column: 2;
+    background-color: var(--blue);
+}
+
+.btn-guest {
+    grid-column: 4;
+    color: var(--blue);
+}
+
+/* reference section */
+.bg-reference {
+    background-image: url(./reference/1-720px.png);
+    height: 500px;
+    width: 720px;
+}
+
+.bg-inverse {
+    filter: invert(100%);
 }
