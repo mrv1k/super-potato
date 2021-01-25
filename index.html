@@ -30,7 +30,10 @@
 
         .row {
             display: grid;
-            grid-template-columns: 52px 112px 8px 118px 18px 54px 12px 102px [ticket-s] 6px [b-img-e] 8px [ticket-e] 29px 24px 1fr;
+            grid-template-columns:
+                52px 112px 8px 118px 18px
+                54px [img-t-s] 12px [img-b-s] 102px [ticket-s] 6px [img-b-e] 8px [ticket-e]
+                29px [img-r-s] 25px 1fr [img-r-e];
             /* 15 columns*/
             grid-template-rows: 39px 13px 4px 8px 42px 27px 57px 18px 26px 10px 5px 8px 32px 44px 16px 11px 21px;
         }
@@ -41,6 +44,12 @@
             height: 500px;
             width: 720px;
         }
+
+        .icon-ticket {
+            transform: rotate(45deg);
+            grid-column: ticket-s / ticket-e;
+            grid-row: 10 / 12;
+        }
     </style>
     <title>Super Potato</title>
 </head>
@@ -50,9 +59,13 @@
         <div class="row bg-1">
             <img class="logo" src="./img/video-camera.svg" alt="video-camera">
             <header class="header">zmurl</header>
-            <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
 
-            <img class="img-1" src="https://via.placeholder.com/360x255">
+            <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
+            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="video-camera">
+
+            <img class="img-top" src="https://via.placeholder.com/360x255">
+            <img class="img-right" src="https://via.placeholder.com/405x455">
+            <img class="img-bottom" src="https://via.placeholder.com/215x275">
         </div>
     </div>
 </body>

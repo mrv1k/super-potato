@@ -31,8 +31,20 @@
 img {
     width: 100%;
     height: 100%;
+    border-radius: 1rem;
 }
-.img-1 {
+
+.img-top {
     grid-column: 7 / 13;
     grid-row: 5 / 8;
+}
+
+.img-right {
+    grid-column: img-r-s / img-r-e;
+    grid-row: 6 / 15;
+}
+
+.img-bottom {
+    grid-row: 11 / 18;
+    grid-column: img-b-s / img-b-e;
 }
