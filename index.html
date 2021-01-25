@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body, html { padding: 0; margin: 0; }
-        *, *:before, *:after { box-sizing: border-box; }
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
 
         .wrapper {
-            max-width: 1280px;
+            max-width: 720px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: 1fr;
             grid-template-rows: repeat(9, auto);
-            gap: 10px;
         }
-        .header, .footer {
-            background-color: var(--blue);
-            grid-column: span 12;
+
+        .header {
+            grid-column-end: span 15;
+            padding-top: 35px;
+            padding-left: 81px;
+            font-size: 14pt;
         }
+
         .row {
-            grid-column: 2;
+            display: grid;
+            grid-template-columns: 52px 112px 8px 118px 18px 54px 2px 10px 47px 38px 17px 6px 8px 28px 1fr;
+            /* 15 columns*/
         }
-        .row div {
-            grid-column: auto;
+
+        .bg-1 {
+            background-image: url(./reference/1-720px.png);
+            filter: invert(100%);
+            height: 500px;
+            width: 720px;
         }
     </style>
     <title>Super Potato</title>
@@ -33,8 +52,8 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">Header</header>
-        <div class="row">
+        <div class="row bg-1">
+            <header class="header">zmurl</header>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -48,12 +67,8 @@
             <div>11</div>
             <div>12</div>
         </div>
-        <div>come on</div>
-        <div>align</div>
-        <div>you</div>
-        <div>grid</div>
 
-        <footer class="footer">Footer</footer>
+        <!-- <footer class="footer">Footer</footer> -->
     </div>
 </body>
 
