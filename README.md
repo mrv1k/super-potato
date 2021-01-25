@@ -5,11 +5,12 @@ Dependencies:
 https://github.com/michaelampr/jam
 
 Documentation and tutorials:
-Lots of refence HTML and CSS lookups on https://developer.mozilla.org/en-US/docs/Web
-https://css-tricks.com/snippets/css/complete-guide-grid/
-https://css-tricks.com/getting-started-css-grid/
-https://css-tricks.com/introduction-fr-css-unit/
-https://css-tricks.com/css-grid-replace-flexbox/
-https://dev.to/samanthaming/css-variables-8di
+Lots of JS, HTML, CSS lookups on https://developer.mozilla.org/en-US/docs/Web
 
-Understood how CSS grid works by watching: https://gridbyexample.com/video/
+Learning CSS Grid:
++ https://css-tricks.com/snippets/css/complete-guide-grid/
++ https://css-tricks.com/getting-started-css-grid/
++ https://css-tricks.com/introduction-fr-css-unit/
++ https://css-tricks.com/css-grid-replace-flexbox/
++ https://dev.to/samanthaming/css-variables-8di
++ Finally understood how CSS grid works by watching: https://gridbyexample.com/video/
