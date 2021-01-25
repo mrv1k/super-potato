@@ -35,12 +35,32 @@
             /* 17 rows */
         }
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const row = document.querySelector(".row");
+            document.querySelector(".btn-auth").onclick = function () {
+                if (row.classList.contains("bg-reference")) {
+                    return row.classList.remove("bg-reference");
+                }
+                row.classList.add("bg-reference");
+            }
+
+            const guest = document.querySelector(".btn-guest");
+            document.querySelector(".btn-guest").onclick = function () {
+                if (row.classList.contains("bg-inverse")) {
+                    return row.classList.remove("bg-inverse");
+                }
+                row.classList.add("bg-inverse");
+            }
+        });
+    </script>
     <title>Super Potato</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="row bg-1">
+        <div class="row">
             <img class="logo" src="./img/video-camera.svg" alt="video-camera">
             <header class="header">zmurl</header>
 

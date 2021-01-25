@@ -94,7 +94,7 @@ img {
 
 /* reference section */
 .bg-reference {
-    background-image: url(./reference/1-720px.png);
+    background-image: url(../reference/1-720px.png);
     height: 500px;
     width: 720px;
 }
