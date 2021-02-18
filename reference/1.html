@@ -12,8 +12,12 @@
 
         .grid {
             display: grid;
-            grid-template-columns: 52px 112px 8px 118px 18px 54px 2px 10px 47px 38px 17px 6px 8px 28px 1fr;
-            gap: 0px;
+            /* grid-template-columns: 52px 112px 8px 118px 18px 54px 2px 10px 47px 38px 17px 6px 8px 28px 1fr;
+            gap: 0px; */
+            grid-template-columns: 52px 112px [btn-1] 8px 118px [btn-2] 18px 54px [img-t-s] 12px [img-b-s] 102px [ticket-s] 6px [img-b-e] 8px [ticket-e] 29px [img-r-s] 25px 1fr [img-r-e];
+            /* 15 columns*/
+            grid-template-rows: 39px 13px 4px 8px 42px 27px 57px 18px 26px 10px 5px 8px 32px 44px 16px 12px 20px;
+            /* 17 rows */
         }
     </style>
 </head>

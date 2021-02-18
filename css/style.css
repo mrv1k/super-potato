@@ -1,97 +1,5 @@
 @import url("colors.css");
 
-.header {
-    font-size: 14pt;
-    grid-column: 2;
-    grid-row: 2;
-    margin-left: 28px;
-    margin-top: -4px;
-}
-
-.logo {
-    grid-column: 2 / 2;
-    grid-row: 2;
-    width: 22px;
-    height: auto;
-    margin-top: -3px;
-    margin-left: 3px;
-}
-
-.icon-camera {
-    grid-column: 7;
-    grid-row: 4;
-    width: 14px;
-    height: auto;
-    margin-top: -3px;
-    margin-left: -1px;
-}
-
-.icon-ticket {
-    transform: rotate(45deg);
-    grid-column: ticket-s / ticket-e;
-    grid-row: 10 / 12;
-}
-
-.icon-calendar {
-    grid-column: 5;
-    grid-row: 16;
-    margin-top: -1px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-}
-
-.img-top {
-    grid-column: 7 / 13;
-    grid-row: 5 / 8;
-}
-
-.img-right {
-    grid-column: img-r-s / img-r-e;
-    grid-row: 6 / 15;
-}
-
-.img-bottom {
-    grid-row: 11 / 18;
-    grid-column: img-b-s / img-b-e;
-}
-
-.title {
-    grid-column: 2 / 6;
-    font-size: 23pt;
-    grid-row: 7;
-    line-height: 0.9;
-    font-weight: bold;
-}
-
-.subtitle {
-    grid-column: 2 / 6;
-    grid-row: 9;
-    font-size: 8pt;
-    color: var(--gray-2);
-    margin-top: -2px;
-}
-
-.btn {
-    grid-row: 13;
-    border: none;
-    font-size: 7pt;
-    border-radius: 3px;
-}
-
-.btn-auth {
-    grid-column: 2;
-    background-color: var(--blue);
-}
-
-.btn-guest {
-    grid-column: 4;
-    color: var(--blue);
-}
-
 /* reference section */
 .bg-reference {
     background-image: url(../reference/1-720px.png);
@@ -102,3 +10,43 @@ img {
 .bg-inverse {
     filter: invert(100%);
 }
+
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 56px);
+    gap: 4px;
+}
+
+.spacer-top {
+    margin-top: 40px;
+}
+
+/* .spacer-left {} */
+
+.logo {
+    grid-column: 2 / 4;
+    /* grid-row: 10 / 12; */
+}
+
+/* .header {} */
