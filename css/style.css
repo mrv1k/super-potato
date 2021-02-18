@@ -29,24 +29,41 @@ html {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, auto);
+    grid-template-rows:
+        52px [logo] 12px [img-1-s] 42px [img-2-s] 28px [title-s]
+        56px [title-e img-1-e] 16px [subtitle-s] 24px [subtitle-e] 14px [img-3-s]
+        32px [btn-baseline] 56px [img-2-e] 48px [img-3-e] 56px [trusted-s]
+        42px [trusted-e];
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(12, 56px);
-    gap: 4px;
+    column-gap: 4px;
 }
-
-.spacer-top {
-    margin-top: 40px;
-}
-
-/* .spacer-left {} */
 
 .logo {
+    align-self: flex-end;
     grid-column: 2 / 4;
-    /* grid-row: 10 / 12; */
+    line-height: 24px;
 }
 
-/* .header {} */
+.icon-logo {
+    vertical-align: middle;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.title {
+    grid-row: title-s / title-e;
+}
+
+.img-1 {
+    grid-row: img-1-s / img-1-e;
+}
+
+.img-2 {
+    grid-row: img-2-s / img-2-e;
+}

@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script>
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     const row = document.querySelector(".row");
-        //     document.querySelector(".btn-auth").onclick = function () {
-        //         if (row.classList.contains("bg-reference")) {
-        //             return row.classList.remove("bg-reference");
-        //         }
-        //         row.classList.add("bg-reference");
-        //     }
+        document.addEventListener("DOMContentLoaded", () => {
+            const row = document.querySelector(".wrapper");
+            document.querySelector(".btn-auth").onclick = function () {
+                if (row.classList.contains("bg-reference")) {
+                    return row.classList.remove("bg-reference");
+                }
+                row.classList.add("bg-reference");
+            }
 
-        //     const guest = document.querySelector(".btn-guest");
-        //     document.querySelector(".btn-guest").onclick = function () {
-        //         if (row.classList.contains("bg-inverse")) {
-        //             return row.classList.remove("bg-inverse");
-        //         }
-        //         row.classList.add("bg-inverse");
-        //     }
-        // });
+            const guest = document.querySelector(".btn-guest");
+            document.querySelector(".btn-guest").onclick = function () {
+                if (row.classList.contains("bg-inverse")) {
+                    return row.classList.remove("bg-inverse");
+                }
+                row.classList.add("bg-inverse");
+            }
+        });
     </script>
     <title>Super Potato</title>
 </head>
@@ -33,29 +33,53 @@
     <div class="wrapper">
         <div class="row">
             <span class="logo">
-                <img class="logo-icon" src="./img/video-camera.svg" alt="video-camera">
-                <span class="header">zmurl</span>
+                <img class="icon-logo" src="./img/video-camera.svg" alt="video-camera">
+                <span class="header"><span class="blue">zm</span>url</span>
             </span>
         </div>
 
+        <!-- <div class="row">
+            <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
+        </div> -->
+        <div class="row">
+            <div class="img-1">img-1</div>
+        </div>
+        <div class="row">
+            <div class="img-2">img-2</div>
+        </div>
         <div class="row">
 
-            <div class="title">Organize delightful Zoom events</div>
-            <div class="subtitle">Create gorgeous event page in minutes with custom
-                reminders and direct messagest.
-            </div>
+        </div>
+        <div class="row">title-e || img-1-e</div>
+        <div class="row">
+            <!-- subtitle-s / subtitle-e -->
 
-            <!-- <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
-            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="ticket">
-            <img class="icon icon-calendar" src="./img/calendar-f.svg" alt="calendar">
+        </div>
+        <div class="row">small-text-e</div>
+        <div class="row">img-3-s</div>
 
+        <!-- <div class="row">
+
+        </div> -->
+
+        <div class="row">
+            <!-- btn-baseline -->
             <button class="btn btn-auth">Sign in with Zoom</button>
             <button class="btn btn-guest">Continue as Guest</button>
+        </div>
 
+        <div class="row">img-2-e</div>
+        <div class="row">img-3-e</div>
+        <div class="row">trusted-s</div>
+        <div class="row">trusted-e</div>
+        <!-- <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
+            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="ticket">
+            <img class="icon icon-calendar" src="./img/calendar-f.svg" alt="calendar"> -->
+
+        <!--
             <img class="img-top" src="https://via.placeholder.com/360x255">
             <img class="img-right" src="https://via.placeholder.com/405x455">
             <img class="img-bottom" src="https://via.placeholder.com/215x275"> -->
-        </div>
     </div>
 </body>
 

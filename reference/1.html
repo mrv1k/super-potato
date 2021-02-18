@@ -10,7 +10,7 @@
             width: 720px;
         }
 
-        .grid {
+        .ocd-grid {
             display: grid;
             /* grid-template-columns: 52px 112px 8px 118px 18px 54px 2px 10px 47px 38px 17px 6px 8px 28px 1fr;
             gap: 0px; */
@@ -19,21 +19,31 @@
             grid-template-rows: 39px 13px 4px 8px 42px 27px 57px 18px 26px 10px 5px 8px 32px 44px 16px 12px 20px;
             /* 17 rows */
         }
+        .wrapper {
+            display: grid;
+            grid-template-rows:
+                52px [logo] 12px [img-1-s] 42px [img-2-s] 28px [big-text-s]
+                56px [big-text-e img-1-e] 16px [small-text-s] 24px [small-text-e] 14px [img-3-s]
+                32px [btn-baseline] 56px [img-2-e] 48px [img-3-e] 56px [trusted-s]
+                42px [trusted-e];
+            grid-template-columns: repeat(12, 56px);
+            column-gap: 4px;
+        }
     </style>
 </head>
 
 <body style="margin: 0px; background: #0e0e0e; height: 100%">
-    <div class="bg grid">
-        <div>1</div>
-        <!-- <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+    <div class="bg wrapper">
+        <div class="row">1</div>
+        <div class="row">2</div>
+        <div class="row">3</div>
+        <div class="row">4</div>
+        <div class="row">5</div>
+        <div class="row">6</div>
+        <div class="row">7</div>
+        <div class="row">8</div>
+        <div class="row">9</div>
+        <!-- <div>10</div>
         <div>11</div>
         <div>12</div> -->
     </div>
