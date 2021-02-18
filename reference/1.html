@@ -22,30 +22,76 @@
         .wrapper {
             display: grid;
             grid-template-rows:
-                52px [logo] 12px [img-1-s] 42px [img-2-s] 28px [big-text-s]
-                56px [big-text-e img-1-e] 16px [small-text-s] 24px [small-text-e] 14px [img-3-s]
+                52px [logo] 12px [img-1-s] 42px [img-2-s] 28px [title-s]
+                56px [title-e img-1-e] 16px [subtitle-s] 24px [subtitle-e] 14px [img-3-s]
                 32px [btn-baseline] 56px [img-2-e] 48px [img-3-e] 56px [trusted-s]
                 42px [trusted-e];
             grid-template-columns: repeat(12, 56px);
             column-gap: 4px;
+        }
+
+        .logo {
+            grid-column: 2 / span 12;
+        }
+
+        .img-1 {
+            grid-row: img-1-s / img-1-e;
+            grid-column: 7 / 10;
+        }
+
+        .img-2 {
+            grid-row: img-2-s / img-2-e;
+            grid-column: 9 / 13;
+            padding-left: 39px;
+        }
+
+        .title {
+            grid-row: title-s / title-e;
+            grid-column: 2 / 6;
+        }
+
+        .subtitle {
+            grid-row: subtitle-s / subtitle-e;
+            grid-column: 2 / 6;
+        }
+
+        .button {
+            grid-row-end: btn-baseline;
+            align-self: end;
+        }
+
+        .button-sign-in {
+            grid-column: 2 / 4;
+        }
+
+        .button-guest {
+            grid-column: 4 / 6;
+        }
+
+        .img-3 {
+            grid-row: img-3-s / img-e-3;
+            grid-column: 7 / 9;
+            padding-left: 15px;
+        }
+
+        .banner-trusted-by {
+            grid-row: trusted-s / trusted-e;
+            grid-column: 3 / 11;
         }
     </style>
 </head>
 
 <body style="margin: 0px; background: #0e0e0e; height: 100%">
     <div class="bg wrapper">
-        <div class="row">1</div>
-        <div class="row">2</div>
-        <div class="row">3</div>
-        <div class="row">4</div>
-        <div class="row">5</div>
-        <div class="row">6</div>
-        <div class="row">7</div>
-        <div class="row">8</div>
-        <div class="row">9</div>
-        <!-- <div>10</div>
-        <div>11</div>
-        <div>12</div> -->
+        <div class="logo">1</div>
+        <div class="img-1">2</div>
+        <div class="img-2">3</div>
+        <div class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, ducimus?</div>
+        <div class="subtitle">5</div>
+        <div class="button button-sign-in">6</div>
+        <div class="button button-guest">7</div>
+        <div class="img-3">8</div>
+        <div class="banner-trusted-by">9</div>
     </div>
 </body>
 
