@@ -4,289 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const wrapper = document.querySelector(".wrapper");
-            document.querySelector(".button-sign-in").onclick = function () {
-                if (wrapper.classList.contains("bg-reference")) {
-                    return wrapper.classList.remove("bg-reference");
-                }
-                wrapper.classList.add("bg-reference");
-            }
+    <link rel="stylesheet" href="css/style.css">
 
-            document.querySelector(".button-guest").onclick = function () {
-                if (wrapper.classList.contains("bg-inverse")) {
-                    return wrapper.classList.remove("bg-inverse");
-                }
-                wrapper.classList.add("bg-inverse");
-            }
-        });
-    </script>
-    <link rel="stylesheet" href="css/colors.css">
     <style>
-        body,
-        html {
-            padding: 0;
-            margin: 0;
-            font-family: sans-serif;
-        }
-
-        *,
-        *:before,
-        *:after {
-            box-sizing: border-box;
-        }
-
         .bg-reference {
-            background-image: url(1-720px.png);
+            background-image: url(reference/1-720px.png);
+            height: 500px;
+            width: 720px;
         }
 
         .bg-inverse {
             filter: invert(100%);
-        }
-
-        .bg {
-            height: 500px;
-            width: 720px;
-            background-color: white;
-            /* #f6f6fe */
-        }
-
-        .wrapper {
-            display: grid;
-            grid-template-columns: 52px 264px 48px 56px 1fr;
-            grid-template-rows: [gray-bg-s] 59px [logo] 5px [section-right-s] 69px [section-left-s] 156px [section-left-e] 75px [gray-bg-e] 17px [section-right-e] 53px [trusted-s] 1fr [trusted-e];
-        }
-
-        .logo {
-            align-self: flex-end;
-            grid-column: 2 / 4;
-            line-height: 24px;
-            font-weight: bold;
-        }
-
-        .icon-logo {
-            vertical-align: middle;
-        }
-
-        .blue {
-            color: var(--blue);
-        }
-
-        .gray-bg {
-            grid-column: 5 / -1;
-            grid-row: gray-bg-s / gray-bg-e;
-            background-color: var(--gray-6);
-        }
-
-        .section {
-            display: grid;
-        }
-
-        .section-left {
-            grid-column: 2;
-            grid-row: section-left-s / section-left-e;
-            grid-template-rows: 56px 17px 28px 22px 1fr;
-            grid-template-columns: 112px 112px 1fr;
-        }
-
-        .title {
-            grid-row: 1;
-            grid-column: 1 / -1;
-            font-size: 1.75rem;
-            line-height: 1.95rem;
-            font-weight: bold;
-            margin-top: -3px;
-        }
-
-        .subtitle {
-            grid-row: 3;
-            grid-column: 1 / -1;
-            font-size: 0.6rem;
-            line-height: 0.85rem;
-            color: var(--gray-2);
-            font-weight: 300;
-        }
-
-        .button {
-            align-self: end;
-            grid-row: -1 / -2;
-            height: 100%;
-            border-radius: 4px;
-            font-size: 7pt;
-            text-align: center;
-            cursor: pointer;
-            padding-top: 12px;
-        }
-
-        .button-sign-in {
-            background-color: var(--blue);
-            color: white;
-            font-size: 6pt;
-        }
-
-        .button-guest {
-            color: var(--blue);
-        }
-
-        .section-right {
-            grid-column: 4 / -1;
-            grid-row: section-right-s / section-right-e;
-            grid-template-columns:
-                [img-1-s] 10px [img-3-s] 108px [img-3-e] 36px [img-2-s] 25px [img-1-e] 1fr [img-2-e];
-            grid-template-rows: [img-1-s] 41px [img-2-s] 85px [img-1-e] 54px [img-3-s] 89px [img-2-e] 1fr [img-3-e];
-        }
-
-        .img-1 {
-            grid-row: img-1-s / img-1-e;
-            grid-column: img-1-s / img-1-e;
-            position: relative;
-        }
-
-        .img-2 {
-            grid-row: img-2-s / img-2-e;
-            grid-column: img-2-s / img-2-e;
-        }
-
-        .img-3 {
-            grid-row: img-3-s / img-3-e;
-            grid-column: img-3-s / img-3-e;
-            position: relative;
-        }
-
-        .camera-container {
-            position: absolute;
-            top: -25px;
-            left: -17px;
-            width: 42px;
-            height: 42px;
-            border-radius: 100%;
-            background: var(--red);
-            opacity: 0.7;
-        }
-
-        .camera-inner-bg {
-            position: absolute;
-            width: 27px;
-            height: 27px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 100%;
-            background: var(--blue);
-        }
-
-        .camera-icon {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 14px;
-            transform: translate(-50%, -50%);
-        }
-
-        .ticket-container {
-            position: absolute;
-            top: -24px;
-            right: -22px;
-            width: 42px;
-            height: 42px;
-            border-radius: 100%;
-            background: var(--red);
-            opacity: 0.7;
-        }
-
-        .ticket-inner-bg {
-            position: absolute;
-            width: 27px;
-            height: 27px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 100%;
-            background: var(--blue);
-        }
-
-        .ticket-icon {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 16px;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .calendar-container {
-            position: absolute;
-            bottom: 6px;
-            left: -100px;
-            width: 42px;
-            height: 42px;
-            border-radius: 100%;
-            background: var(--red);
-            opacity: 0.7;
-        }
-
-        .calendar-inner-bg {
-            position: absolute;
-            width: 27px;
-            height: 27px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 100%;
-            background: var(--blue);
-        }
-
-        .calendar-icon {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 12px;
-            transform: translate(-50%, -50%);
-        }
-
-        .row-trusted {
-            grid-row: trusted-s / trusted-e;
-            grid-column: 2 / -1;
-            display: grid;
-            grid-template-columns: 67px 62px 39px 88px 40px 30px 49px 44px 50px 80px;
-            grid-template-rows: 13px 14px 1fr;
-        }
-
-        .row-trusted .text {
-            grid-column: 3 / -1;
-            font-size: 8.8pt;
-            align-self: end;
-            color: var(--gray-2);
-        }
-
-        .trusted-by {
-            grid-row: 3;
-            filter: grayscale(1) opacity(0.2);
-        }
-
-        .row-trusted img {
-            width: 100%;
-        }
-
-        .harvard {
-            grid-column: 2;
-        }
-
-        .yale {
-            grid-column: 4;
-        }
-
-        .tc {
-            grid-column: 6;
-        }
-
-        .stripe {
-            grid-column: 8;
-        }
-
-        .y-combinator {
-            grid-column: 10;
-            font-size: 9pt;
         }
     </style>
 </head>
@@ -355,6 +83,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const wrapper = document.querySelector(".wrapper");
+            document.querySelector(".button-sign-in").onclick = function () {
+                if (wrapper.classList.contains("bg-reference")) {
+                    return wrapper.classList.remove("bg-reference");
+                }
+                wrapper.classList.add("bg-reference");
+            }
+
+            document.querySelector(".button-guest").onclick = function () {
+                if (wrapper.classList.contains("bg-inverse")) {
+                    return wrapper.classList.remove("bg-inverse");
+                }
+                wrapper.classList.add("bg-inverse");
+            }
+        });
+    </script>
 </body>
 
 </html>
