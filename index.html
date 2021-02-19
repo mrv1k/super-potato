@@ -1,85 +1,359 @@
-<!DOCTYPE html>
-<html lang="en">
+<html style="height: 100%;">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const row = document.querySelector(".wrapper");
-            document.querySelector(".btn-auth").onclick = function () {
-                if (row.classList.contains("bg-reference")) {
-                    return row.classList.remove("bg-reference");
+            const wrapper = document.querySelector(".wrapper");
+            document.querySelector(".button-sign-in").onclick = function () {
+                if (wrapper.classList.contains("bg-reference")) {
+                    return wrapper.classList.remove("bg-reference");
                 }
-                row.classList.add("bg-reference");
+                wrapper.classList.add("bg-reference");
             }
 
-            const guest = document.querySelector(".btn-guest");
-            document.querySelector(".btn-guest").onclick = function () {
-                if (row.classList.contains("bg-inverse")) {
-                    return row.classList.remove("bg-inverse");
+            document.querySelector(".button-guest").onclick = function () {
+                if (wrapper.classList.contains("bg-inverse")) {
+                    return wrapper.classList.remove("bg-inverse");
                 }
-                row.classList.add("bg-inverse");
+                wrapper.classList.add("bg-inverse");
             }
         });
     </script>
-    <title>Super Potato</title>
+    <link rel="stylesheet" href="css/colors.css">
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        .bg-reference {
+            background-image: url(1-720px.png);
+        }
+
+        .bg-inverse {
+            filter: invert(100%);
+        }
+
+        .bg {
+            height: 500px;
+            width: 720px;
+            background-color: white;
+            /* #f6f6fe */
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 52px 264px 48px 56px 1fr;
+            grid-template-rows: [gray-bg-s] 59px [logo] 5px [section-right-s] 69px [section-left-s] 156px [section-left-e] 75px [gray-bg-e] 17px [section-right-e] 53px [trusted-s] 1fr [trusted-e];
+        }
+
+        .logo {
+            align-self: flex-end;
+            grid-column: 2 / 4;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        .icon-logo {
+            vertical-align: middle;
+        }
+
+        .blue {
+            color: var(--blue);
+        }
+
+        .gray-bg {
+            grid-column: 5 / -1;
+            grid-row: gray-bg-s / gray-bg-e;
+            background-color: var(--gray-6);
+        }
+
+        .section {
+            display: grid;
+        }
+
+        .section-left {
+            grid-column: 2;
+            grid-row: section-left-s / section-left-e;
+            grid-template-rows: 56px 17px 28px 22px 1fr;
+            grid-template-columns: 112px 112px 1fr;
+        }
+
+        .title {
+            grid-row: 1;
+            grid-column: 1 / -1;
+            font-size: 1.75rem;
+            line-height: 1.95rem;
+            font-weight: bold;
+            margin-top: -3px;
+        }
+
+        .subtitle {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            font-size: 0.6rem;
+            line-height: 0.85rem;
+            color: var(--gray-2);
+            font-weight: 300;
+        }
+
+        .button {
+            align-self: end;
+            grid-row: -1 / -2;
+            height: 100%;
+            border-radius: 4px;
+            font-size: 7pt;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 12px;
+        }
+
+        .button-sign-in {
+            background-color: var(--blue);
+            color: white;
+            font-size: 6pt;
+        }
+
+        .button-guest {
+            color: var(--blue);
+        }
+
+        .section-right {
+            grid-column: 4 / -1;
+            grid-row: section-right-s / section-right-e;
+            grid-template-columns:
+                [img-1-s] 10px [img-3-s] 108px [img-3-e] 36px [img-2-s] 25px [img-1-e] 1fr [img-2-e];
+            grid-template-rows: [img-1-s] 41px [img-2-s] 85px [img-1-e] 54px [img-3-s] 89px [img-2-e] 1fr [img-3-e];
+        }
+
+        .img-1 {
+            grid-row: img-1-s / img-1-e;
+            grid-column: img-1-s / img-1-e;
+            position: relative;
+        }
+
+        .img-2 {
+            grid-row: img-2-s / img-2-e;
+            grid-column: img-2-s / img-2-e;
+        }
+
+        .img-3 {
+            grid-row: img-3-s / img-3-e;
+            grid-column: img-3-s / img-3-e;
+            position: relative;
+        }
+
+        .camera-container {
+            position: absolute;
+            top: -25px;
+            left: -17px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .camera-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .camera-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 14px;
+            transform: translate(-50%, -50%);
+        }
+
+        .ticket-container {
+            position: absolute;
+            top: -24px;
+            right: -22px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .ticket-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .ticket-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 16px;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .calendar-container {
+            position: absolute;
+            bottom: 6px;
+            left: -100px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .calendar-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .calendar-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 12px;
+            transform: translate(-50%, -50%);
+        }
+
+        .row-trusted {
+            grid-row: trusted-s / trusted-e;
+            grid-column: 2 / -1;
+            display: grid;
+            grid-template-columns: 67px 62px 39px 88px 40px 30px 49px 44px 50px 80px;
+            grid-template-rows: 13px 14px 1fr;
+        }
+
+        .row-trusted .text {
+            grid-column: 3 / -1;
+            font-size: 8.8pt;
+            align-self: end;
+            color: var(--gray-2);
+        }
+
+        .trusted-by {
+            grid-row: 3;
+            filter: grayscale(1) opacity(0.2);
+        }
+
+        .row-trusted img {
+            width: 100%;
+        }
+
+        .harvard {
+            grid-column: 2;
+        }
+
+        .yale {
+            grid-column: 4;
+        }
+
+        .tc {
+            grid-column: 6;
+        }
+
+        .stripe {
+            grid-column: 8;
+        }
+
+        .y-combinator {
+            grid-column: 10;
+            font-size: 9pt;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="wrapper">
-        <div class="row">
-            <span class="logo">
-                <img class="icon-logo" src="./img/video-camera.svg" alt="video-camera">
-                <span class="header"><span class="blue">zm</span>url</span>
-            </span>
+<body style="margin: 0px; background: #0e0e0e; height: 100%">
+    <div class="bg wrapper">
+        <span class="logo">
+            <img class="icon-logo" src="img/video-camera.svg" alt="video-camera">
+            <span class="header"><span class="blue">zm</span>url</span>
+        </span>
+
+        <div class="gray-bg"></div>
+
+        <div class="section section-left">
+            <div class="title">Organize delightful Zoom events</div>
+            <div class="subtitle">Create a gorgeous event page in minutes with custom reminders and direct messages.
+            </div>
+            <div class="button button-sign-in">Sign in with Zoom</div>
+            <div class="button button-guest">Continue as Guest</div>
         </div>
 
-        <!-- <div class="row">
-            <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
-        </div> -->
-        <div class="row">
-            <div class="img-1">img-1</div>
-        </div>
-        <div class="row">
-            <div class="img-2">img-2</div>
-        </div>
-        <div class="row">
+        <div class="section section-right">
+            <div class="img-2"><img class="img" src="https://via.placeholder.com/202x228"></div>
+            <div class="img-1">
+                <div class="camera-container">
+                    <div class="camera-inner-bg">
+                        <img class="icon camera-icon" src="img/video-camera-f.svg" alt="video-camera">
+                    </div>
+                </div>
+                <img class="img" src="https://via.placeholder.com/180x126">
+            </div>
+            <div class="img-3">
+                <div class="ticket-container">
+                    <div class="ticket-inner-bg">
+                        <img class="icon ticket-icon" src="img/ticket-f.svg" alt="ticket">
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-inner-bg">
+                        <img class="icon calendar-icon" src="img/calendar-f.svg" alt="calendar">
+                    </div>
+                </div>
+
+                <img class="img" src="https://via.placeholder.com/108x137">
+            </div>
 
         </div>
-        <div class="row">title-e || img-1-e</div>
-        <div class="row">
-            <!-- subtitle-s / subtitle-e -->
 
+        <div class="row-trusted">
+            <div class="text">Trusted by some of the world's innovative institutions and companies</div>
+            <div class="trusted-by harvard">
+                <img src="img/trusted-by/Harvard_University_logo.svg" alt="">
+            </div>
+            <div class="trusted-by yale">
+                <img src="img/trusted-by/yale-logo.png" alt="yale uni">
+            </div>
+            <div class="trusted-by tc">
+                <img src="img/trusted-by/TechCrunch_logo.svg" alt="TechCrunch_logo">
+            </div>
+            <div class="trusted-by stripe">
+                <img src="img/trusted-by/Stripe_wordmark-slate.svg" alt="stripe">
+            </div>
+            <div class="trusted-by y-combinator">
+                <img src="img/trusted-by/Y-combinator-logo.gif" alt="y combinator logo">
+            </div>
         </div>
-        <div class="row">small-text-e</div>
-        <div class="row">img-3-s</div>
-
-        <!-- <div class="row">
-
-        </div> -->
-
-        <div class="row">
-            <!-- btn-baseline -->
-            <button class="btn btn-auth">Sign in with Zoom</button>
-            <button class="btn btn-guest">Continue as Guest</button>
-        </div>
-
-        <div class="row">img-2-e</div>
-        <div class="row">img-3-e</div>
-        <div class="row">trusted-s</div>
-        <div class="row">trusted-e</div>
-        <!-- <img class="icon-camera" src="./img/video-camera-f.svg" alt="video-camera">
-            <img class="icon icon-ticket" src="./img/ticket-f.svg" alt="ticket">
-            <img class="icon icon-calendar" src="./img/calendar-f.svg" alt="calendar"> -->
-
-        <!--
-            <img class="img-top" src="https://via.placeholder.com/360x255">
-            <img class="img-right" src="https://via.placeholder.com/405x455">
-            <img class="img-bottom" src="https://via.placeholder.com/215x275"> -->
     </div>
 </body>
 
