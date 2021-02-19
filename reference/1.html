@@ -82,6 +82,7 @@
         .img-1 {
             grid-row: img-1-s / img-1-e;
             grid-column: img-1-s / img-1-e;
+            position: relative;
         }
 
         .img-2 {
@@ -99,8 +100,8 @@
             position: absolute;
             top: -24px;
             right: -22px;
-            width: 43px;
-            height: 43px;
+            width: 42px;
+            height: 42px;
             border-radius: 100%;
             background: var(--red);
             opacity: 0.7;
@@ -124,6 +125,36 @@
             width: 16px;
             transform: translate(-50%, -50%) rotate(45deg);
         }
+
+        .camera-container {
+            position: absolute;
+            top: -25px;
+            left: -17px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .camera-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .icon-camera {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 16px;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -139,7 +170,14 @@
         </div>
         <div class="section section-right">
             <div class="img-2"><img class="img" src="https://via.placeholder.com/202x228"></div>
-            <div class="img-1"><img class="img" src="https://via.placeholder.com/180x126"></div>
+            <div class="img-1">
+                <div class="camera-container">
+                    <div class="camera-inner-bg">
+                        <img class="icon icon-camera" src="../img/video-camera-f.svg" alt="video-camera">
+                    </div>
+                </div>
+                <img class="img" src="https://via.placeholder.com/180x126">
+            </div>
             <div class="img-3">
                 <div class="ticket-container">
                     <div class="ticket-inner-bg">
