@@ -96,36 +96,6 @@
             position: relative;
         }
 
-        .ticket-container {
-            position: absolute;
-            top: -24px;
-            right: -22px;
-            width: 42px;
-            height: 42px;
-            border-radius: 100%;
-            background: var(--red);
-            opacity: 0.7;
-        }
-
-        .ticket-inner-bg {
-            position: absolute;
-            width: 27px;
-            height: 27px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 100%;
-            background: var(--blue);
-        }
-
-        .icon-ticket {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 16px;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
         .camera-container {
             position: absolute;
             top: -25px;
@@ -148,11 +118,71 @@
             background: var(--blue);
         }
 
-        .icon-camera {
+        .camera-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 14px;
+            transform: translate(-50%, -50%);
+        }
+
+        .ticket-container {
+            position: absolute;
+            top: -24px;
+            right: -22px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .ticket-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .ticket-icon {
             position: absolute;
             left: 50%;
             top: 50%;
             width: 16px;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .calendar-container {
+            position: absolute;
+            bottom: 7px;
+            left: -100px;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .calendar-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .calendar-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 12px;
             transform: translate(-50%, -50%);
         }
     </style>
@@ -173,7 +203,7 @@
             <div class="img-1">
                 <div class="camera-container">
                     <div class="camera-inner-bg">
-                        <img class="icon icon-camera" src="../img/video-camera-f.svg" alt="video-camera">
+                        <img class="icon camera-icon" src="../img/video-camera-f.svg" alt="video-camera">
                     </div>
                 </div>
                 <img class="img" src="https://via.placeholder.com/180x126">
@@ -181,9 +211,16 @@
             <div class="img-3">
                 <div class="ticket-container">
                     <div class="ticket-inner-bg">
-                        <img class="icon icon-ticket" src="../img/ticket-f.svg" alt="ticket">
+                        <img class="icon ticket-icon" src="../img/ticket-f.svg" alt="ticket">
                     </div>
                 </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-inner-bg">
+                        <img class="icon calendar-icon" src="../img/calendar-f.svg" alt="calendar">
+                    </div>
+                </div>
+
                 <img class="img" src="https://via.placeholder.com/108x137">
             </div>
 
