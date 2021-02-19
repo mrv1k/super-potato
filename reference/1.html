@@ -9,29 +9,32 @@
             background-image: url(1-720px.png);
             height: 500px;
             width: 720px;
-            z-index: -100;
         }
 
         .wrapper {
             display: grid;
             grid-template-columns: 52px 264px 48px 56px 1fr;
-            /* grid-template-rows:
-                52px [logo] 12px [img-1-s] 42px [img-2-s] 28px [title-s]
-                56px [title-e img-1-e] 16px [subtitle-s] 24px [subtitle-e] 14px [img-3-s]
-                32px [button-text] 56px [img-2-e] 49px [img-3-e] 54px [trusted-s]
-                42px [trusted-e]; */
-            grid-template-rows: [gray-bg-s] 52px [logo] 12px [section-right-s] 69px [section-left-s] 156px [section-left-e] 76px [gray-bg-e] 17px [section-right-e];
+            grid-template-rows: [gray-bg-s] 59px [logo] 5px [section-right-s] 69px [section-left-s] 156px [section-left-e] 75px [gray-bg-e] 17px [section-right-e] 53px [trusted-s] 1fr [trusted-e];
         }
 
         .logo {
-            grid-column: 2 / -1;
+            align-self: flex-end;
+            grid-column: 2 / 4;
+            line-height: 24px;
+        }
+
+        .icon-logo {
+            vertical-align: middle;
+        }
+
+        .blue {
+            color: var(--blue);
         }
 
         .gray-bg {
             grid-column: 5 / -1;
             grid-row: gray-bg-s / gray-bg-e;
             /* background-color: var(--gray-6); */
-            /* TODO: Re-enable before prod */
         }
 
         .title {
@@ -57,9 +60,9 @@
             grid-column: 4 / 6;
         }
 
-        .banner-trusted-by {
+        .row-trusted {
             grid-row: trusted-s / trusted-e;
-            grid-column: 3 / 11;
+            grid-column: 2 / -1;
         }
 
         .section {
@@ -158,7 +161,7 @@
 
         .calendar-container {
             position: absolute;
-            bottom: 7px;
+            bottom: 6px;
             left: -100px;
             width: 42px;
             height: 42px;
@@ -190,14 +193,20 @@
 
 <body style="margin: 0px; background: #0e0e0e; height: 100%">
     <div class="bg wrapper">
-        <div class="logo">1</div>
+        <span class="logo">
+            <img class="icon-logo" src="../img/video-camera.svg" alt="video-camera">
+            <span class="header"><span class="blue">zm</span>url</span>
+        </span>
+
         <div class="gray-bg"></div>
+
         <div class="section section-left">
             <div class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, ducimus?</div>
             <div class="subtitle">5</div>
             <div class="button button-sign-in">6</div>
             <div class="button button-guest">7</div>
         </div>
+
         <div class="section section-right">
             <div class="img-2"><img class="img" src="https://via.placeholder.com/202x228"></div>
             <div class="img-1">
@@ -225,7 +234,8 @@
             </div>
 
         </div>
-        <div class="banner-trusted-by">9</div>
+
+        <div class="row-trusted">trusted by nobody</div>
     </div>
 </body>
 
