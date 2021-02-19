@@ -5,10 +5,24 @@
     <title>1</title>
     <link rel="stylesheet" href="../css/colors.css">
     <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
         .bg {
             background-image: url(1-720px.png);
             height: 500px;
             width: 720px;
+            background-color: white;
         }
 
         .wrapper {
@@ -58,11 +72,6 @@
 
         .button-guest {
             grid-column: 4 / 6;
-        }
-
-        .row-trusted {
-            grid-row: trusted-s / trusted-e;
-            grid-column: 2 / -1;
         }
 
         .section {
@@ -188,6 +197,46 @@
             width: 12px;
             transform: translate(-50%, -50%);
         }
+
+        .row-trusted {
+            grid-row: trusted-s / trusted-e;
+            grid-column: 2 / -1;
+            display: grid;
+            grid-template-columns: 67px 62px 39px 88px 40px 30px 49px 44px 50px 80px;
+            grid-template-rows: 13px 14px 1fr;
+        }
+
+        .row-trusted .text {
+            grid-column: 3 / -1;
+            font-size: 8.8pt;
+            align-self: end;
+        }
+
+        .trusted-by {
+            grid-row: 3;
+            font-size: 10pt;
+        }
+
+        .harvard {
+            grid-column: 2;
+        }
+
+        .yale {
+            grid-column: 4;
+        }
+
+        .tc {
+            grid-column: 6;
+        }
+
+        .stripe {
+            grid-column: 8;
+        }
+
+        .y-combinator {
+            grid-column: 10;
+            font-size: 9pt;
+        }
     </style>
 </head>
 
@@ -235,7 +284,14 @@
 
         </div>
 
-        <div class="row-trusted">trusted by nobody</div>
+        <div class="row-trusted">
+            <div class="text">Trusted by some of the world's innovative institutions and companies</div>
+            <div class="trusted-by harvard">Harvard</div>
+            <div class="trusted-by yale">Yale University</div>
+            <div class="trusted-by tc">TC</div>
+            <div class="trusted-by stripe">stripe</div>
+            <div class="trusted-by y-combinator">Y Combinator</div>
+        </div>
     </div>
 </body>
 
