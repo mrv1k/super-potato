@@ -92,6 +92,37 @@
         .img-3 {
             grid-row: img-3-s / img-3-e;
             grid-column: img-3-s / img-3-e;
+            position: relative;
+        }
+
+        .ticket-container {
+            position: absolute;
+            top: -24px;
+            right: -22px;
+            width: 43px;
+            height: 43px;
+            border-radius: 100%;
+            background: var(--red);
+            opacity: 0.7;
+        }
+
+        .ticket-inner-bg {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background: var(--blue);
+        }
+
+        .icon-ticket {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 16px;
+            transform: translate(-50%, -50%) rotate(45deg);
         }
     </style>
 </head>
@@ -107,9 +138,17 @@
             <div class="button button-guest">7</div>
         </div>
         <div class="section section-right">
-            <div class="img-1"><img class="img" src="https://via.placeholder.com/180x126"></div>
             <div class="img-2"><img class="img" src="https://via.placeholder.com/202x228"></div>
-            <div class="img-3"><img class="img-top" src="https://via.placeholder.com/108x137"></div>
+            <div class="img-1"><img class="img" src="https://via.placeholder.com/180x126"></div>
+            <div class="img-3">
+                <div class="ticket-container">
+                    <div class="ticket-inner-bg">
+                        <img class="icon icon-ticket" src="../img/ticket-f.svg" alt="ticket">
+                    </div>
+                </div>
+                <img class="img" src="https://via.placeholder.com/108x137">
+            </div>
+
         </div>
         <div class="banner-trusted-by">9</div>
     </div>
