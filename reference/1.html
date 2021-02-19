@@ -3,6 +3,24 @@
 <head>
     <meta name="viewport" content="width=device-width, minimum-scale=0.1">
     <title>1</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const wrapper = document.querySelector(".wrapper");
+            document.querySelector(".button-sign-in").onclick = function () {
+                if (wrapper.classList.contains("bg-reference")) {
+                    return wrapper.classList.remove("bg-reference");
+                }
+                wrapper.classList.add("bg-reference");
+            }
+
+            document.querySelector(".button-guest").onclick = function () {
+                if (wrapper.classList.contains("bg-inverse")) {
+                    return wrapper.classList.remove("bg-inverse");
+                }
+                wrapper.classList.add("bg-inverse");
+            }
+        });
+    </script>
     <link rel="stylesheet" href="../css/colors.css">
     <style>
         body,
@@ -18,11 +36,19 @@
             box-sizing: border-box;
         }
 
-        .bg {
+        .bg-reference {
             background-image: url(1-720px.png);
+        }
+
+        .bg-inverse {
+            filter: invert(100%);
+        }
+
+        .bg {
             height: 500px;
             width: 720px;
             background-color: white;
+            /* #f6f6fe */
         }
 
         .wrapper {
@@ -35,6 +61,7 @@
             align-self: flex-end;
             grid-column: 2 / 4;
             line-height: 24px;
+            font-weight: bold;
         }
 
         .icon-logo {
@@ -48,30 +75,7 @@
         .gray-bg {
             grid-column: 5 / -1;
             grid-row: gray-bg-s / gray-bg-e;
-            /* background-color: var(--gray-6); */
-        }
-
-        .title {
-            grid-row: title-s / title-e;
-            grid-column: 2 / 6;
-        }
-
-        .subtitle {
-            grid-row: subtitle-s / subtitle-e;
-            grid-column: 2 / 6;
-        }
-
-        .button {
-            grid-row-end: button-text;
-            align-self: end;
-        }
-
-        .button-sign-in {
-            grid-column: 2 / 4;
-        }
-
-        .button-guest {
-            grid-column: 4 / 6;
+            background-color: var(--gray-6);
         }
 
         .section {
@@ -81,6 +85,47 @@
         .section-left {
             grid-column: 2;
             grid-row: section-left-s / section-left-e;
+            grid-template-rows: 56px 17px 28px 22px 1fr;
+            grid-template-columns: 112px 112px 1fr;
+        }
+
+        .title {
+            grid-row: 1;
+            grid-column: 1 / -1;
+            font-size: 1.75rem;
+            line-height: 1.95rem;
+            font-weight: bold;
+            margin-top: -3px;
+        }
+
+        .subtitle {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            font-size: 0.6rem;
+            line-height: 0.85rem;
+            color: var(--gray-2);
+            font-weight: 300;
+        }
+
+        .button {
+            align-self: end;
+            grid-row: -1 / -2;
+            height: 100%;
+            border-radius: 4px;
+            font-size: 7pt;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 12px;
+        }
+
+        .button-sign-in {
+            background-color: var(--blue);
+            color: white;
+            font-size: 6pt;
+        }
+
+        .button-guest {
+            color: var(--blue);
         }
 
         .section-right {
@@ -250,10 +295,11 @@
         <div class="gray-bg"></div>
 
         <div class="section section-left">
-            <div class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, ducimus?</div>
-            <div class="subtitle">5</div>
-            <div class="button button-sign-in">6</div>
-            <div class="button button-guest">7</div>
+            <div class="title">Organize delightful Zoom events</div>
+            <div class="subtitle">Create a gorgeous event page in minutes with custom reminders and direct messages.
+            </div>
+            <div class="button button-sign-in">Sign in with Zoom</div>
+            <div class="button button-guest">Continue as Guest</div>
         </div>
 
         <div class="section section-right">
